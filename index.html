@@ -31,7 +31,7 @@
                 <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginmodal">
+                <a id="logButton">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -168,7 +168,7 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     
-                    <a class="btn btn-primary btn-sm btn-warning btn-block" role="button" data-toggle="modal" data-target="#resmodal">Reserve Table</a>
+                    <a class="btn btn-primary btn-sm btn-warning btn-block" role="button" id="resButton">Reserve Table</a>
              
                 </div>
 
@@ -348,6 +348,14 @@
 
                  }
                  
+             });
+
+             $("#resButton").click(function(){
+                $('#resmodal').modal('toggle')
+             });
+
+             $("#logButton").click(function(){
+                $('#loginmodal').modal('toggle')
              });
          });
      </script>
